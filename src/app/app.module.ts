@@ -9,6 +9,8 @@ import { ROUTING } from "./app.routing";
 import { HomeComponent } from "./home/home.component";
 import { AboutComponent } from "./about/about.component";
 import { MovieComponent } from './movie/movie.component';
+import { MovieService } from './movie.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     declarations: [
@@ -23,9 +25,10 @@ import { MovieComponent } from './movie/movie.component';
         FormsModule,
         HttpModule,
         ClarityModule,
-        ROUTING
+        ROUTING,
+        HttpClientModule
     ],
-    providers: [],
+    providers: [MovieService],
     bootstrap: [AppComponent]
 })
 export class AppModule {
