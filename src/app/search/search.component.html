@@ -1,3 +1,9 @@
 <p>
   search works!
 </p>
+
+<label>search:
+    <input [(ngModel)]="_movie.search" placeholder="find"
+    (keyup.enter)="newsearch()">
+
+</label>
