@@ -11,13 +11,15 @@ import { AboutComponent } from "./about/about.component";
 import { MovieComponent } from './movie/movie.component';
 import { MovieService } from './movie.service';
 import { HttpClientModule } from '@angular/common/http';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         AboutComponent,
         HomeComponent,
-        MovieComponent
+        MovieComponent,
+        SearchComponent
     ],
     imports: [
         BrowserAnimationsModule,
