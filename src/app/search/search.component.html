@@ -3,7 +3,9 @@
 </p>
 
 <label>search:
-    <input [(ngModel)]="_movie.search" placeholder="find"
-    (keyup.enter)="newsearch()">
-
+    <input [(ngModel)]="_movie.search" placeholder="find" (keyup.enter)="newsearch()">
 </label>
+
+<div *ngIf="response">
+  <div *ngFor="let typed of response" >{{typed.title}}</div>
+</div>
