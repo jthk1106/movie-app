@@ -13,6 +13,7 @@ import { MovieService } from './movie.service';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchComponent } from './search/search.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { UserService } from './user.service';
 
 @NgModule({
     declarations: [
@@ -32,7 +33,7 @@ import { RegistrationComponent } from './registration/registration.component';
         ROUTING,
         HttpClientModule
     ],
-    providers: [MovieService],
+    providers: [MovieService, UserService],
     bootstrap: [AppComponent]
 })
 export class AppModule {

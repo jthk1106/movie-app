@@ -3,6 +3,14 @@
   ~ This software is released under MIT license.
   ~ The full license information can be found in LICENSE in the root directory of this project.
   -->
-<p>Home Component - User login page</p>
+    <input class = "email"
+    type = "text"
+    placeholder="email" 
+    [(ngModel)]="user.email" >
 
-
+    <input class = "password"
+    type = "password"
+    placeholder="password" 
+    [(ngModel)]="user.password"> 
+    
+    <button class = "btn btn-success" (click) = "loginSubmit()">Login</button>
