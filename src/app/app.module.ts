@@ -12,6 +12,7 @@ import { MovieComponent } from './movie/movie.component';
 import { MovieService } from './movie.service';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchComponent } from './search/search.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 @NgModule({
     declarations: [
@@ -19,7 +20,8 @@ import { SearchComponent } from './search/search.component';
         AboutComponent,
         HomeComponent,
         MovieComponent,
-        SearchComponent
+        SearchComponent,
+        RegistrationComponent
     ],
     imports: [
         BrowserAnimationsModule,
