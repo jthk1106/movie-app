@@ -7,5 +7,8 @@
 </label>
 
 <div *ngIf="response">
-  <div *ngFor="let typed of response" >{{typed.title}}</div>
+  <div *ngFor="let typed of response">{{typed.title}} 
+    <div *ngIf="typed.poster_path!=null"><img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{typed.poster_path}}">
+    </div>
+  </div>
 </div>
