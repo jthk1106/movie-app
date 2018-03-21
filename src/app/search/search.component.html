@@ -2,13 +2,29 @@
   search works!
 </p>
 
-<label>search:
-    <input [(ngModel)]="_movie.search" placeholder="find" (keyup.enter)="newsearch()">
+<div>
+<label>search movies:
+    <input [(ngModel)]="_movie.search" placeholder="enter search" (keyup.enter)="newsearch()">
 </label>
 
-<div *ngIf="response">
-  <div *ngFor="let typed of response">{{typed.title}} 
-    <div *ngIf="typed.poster_path!=null"><img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{typed.poster_path}}">
+<div *ngIf="info">
+  <div *ngFor="let typed of info">{{typed.title}} {{typed.release_date}}
+    <div *ngIf="typed.poster_path!=null">
+      <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{typed.poster_path}}">
     </div>
   </div>
 </div>
+</div>
+
+
+<!--
+<div *ngIf="typed.poster_path=null">
+  <img src="https://commons.wikimedia.org/wiki/File%3ANo_image_available.svg">
+</div>
+-->
+
+<!--
+<div *ngIf="typed.poster_path!=null">
+  <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{typed.poster_path}}">
+</div>
+-->

@@ -10,7 +10,7 @@ import { MovieService } from '../movie.service';
 export class SearchComponent implements OnInit {
 
   constructor(private _movie: MovieService) { }
-  response: any;
+  info: any;
   
   
   ngOnInit() {
@@ -21,8 +21,8 @@ export class SearchComponent implements OnInit {
       .subscribe( data => {
         //this.data=data.results
         console.log(data)
-        this.response = data.results
-        console.log(this.response)
+        this.info = data.results
+        console.log(this.info)
       })
   }
   
