@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SearchComponent } from './search/search.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { UserService } from './user.service';
+import { NewuserService } from './newuser.service';
 
 @NgModule({
     declarations: [
@@ -33,7 +34,7 @@ import { UserService } from './user.service';
         ROUTING,
         HttpClientModule
     ],
-    providers: [MovieService, UserService],
+    providers: [MovieService, UserService, NewuserService],
     bootstrap: [AppComponent]
 })
 export class AppModule {

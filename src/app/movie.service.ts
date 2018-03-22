@@ -15,7 +15,7 @@ export class MovieService {
 
   constructor(private http: HttpClient) { }
     
-    getData(){
+    getData(search){
         console.log(this.search);
         return this.http.get( this.url+this.api+this.query+this.search )
         

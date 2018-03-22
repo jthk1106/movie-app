@@ -5,6 +5,7 @@
  */
 import { Component } from "@angular/core";
 import { UserService } from '../user.service';
+import { Router } from '@angular/router';
 
 @Component({
     styleUrls: ['./home.component.scss'],
@@ -12,19 +13,20 @@ import { UserService } from '../user.service';
 })
 export class HomeComponent {
     user: any = {
-        email: "gg@gg.com",
-        password: "gg"
+    
     };
     
-    constructor(private _user: UserService){
+    constructor(private _user: UserService, private router: Router){
         
     }
     
     loginSubmit(){
         console.log(this.user);
-        this._user.login()
+        this._user.login(this.user)
             .subscribe(
                 userRes => console.log(userRes, "res"))
+        this.router.navigate(['/search']);
     }
+    
 }
 

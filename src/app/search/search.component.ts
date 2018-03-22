@@ -18,8 +18,7 @@ export class SearchComponent implements OnInit {
   
   newsearch(search){
     this._movie.getData(search)
-      .subscribe( data => {
-        //this.data=data.results
+      .subscribe( (data: any) => {
         console.log(data)
         this.info = data.results
         console.log(this.info)
