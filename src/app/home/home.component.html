@@ -10,20 +10,23 @@
 </header>
 -->
 <p>VERY SAFE MOVIE FINDER WEBSITE</p>
-<p>Login Page</p>
+<p>Log in to your account</p>
 
+<div>
     <input class = "email"
     type = "text"
     placeholder="email or credit card" 
     [(ngModel)]="user.email" >
-
+</div>
+<div>
     <input class = "password"
     type = "password"
     placeholder="password" 
     [(ngModel)]="user.password"> 
-    
+</div>
+<div>
     <button class = "btn btn-success" (click) = "loginSubmit()">Login</button>
-    
+</div>
 <!--
 <title>W3.CSS Template</title>
 <meta charset="UTF-8">
