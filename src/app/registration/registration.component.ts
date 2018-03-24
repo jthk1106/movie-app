@@ -24,7 +24,7 @@ export class RegistrationComponent implements OnInit {
     this._user.register(this.user)
       .subscribe(
         newReg => console.log(newReg, "reg"))
-    this.router.navigate(['/search'])
+    this.router.navigate(['/home'])
   }
 }
 
