@@ -15,6 +15,8 @@ import { SearchComponent } from './search/search.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { UserService } from './user.service';
 import { NewuserService } from './newuser.service';
+import { FavoritesComponent } from './favorites/favorites.component';
+import { FavoritesService } from './favorites.service';
 
 @NgModule({
     declarations: [
@@ -23,7 +25,8 @@ import { NewuserService } from './newuser.service';
         HomeComponent,
         MovieComponent,
         SearchComponent,
-        RegistrationComponent
+        RegistrationComponent,
+        FavoritesComponent
     ],
     imports: [
         BrowserAnimationsModule,
@@ -34,7 +37,7 @@ import { NewuserService } from './newuser.service';
         ROUTING,
         HttpClientModule
     ],
-    providers: [MovieService, UserService, NewuserService],
+    providers: [MovieService, UserService, NewuserService, FavoritesService],
     bootstrap: [AppComponent]
 })
 export class AppModule {
