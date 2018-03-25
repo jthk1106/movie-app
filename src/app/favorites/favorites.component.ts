@@ -9,9 +9,23 @@ import { FavoritesService } from '../favorites.service';
 export class FavoritesComponent implements OnInit {
   favoriteMovies: any;
   
-  constructor() { }
+  constructor(private _favorite: FavoritesService) { 
+    this.favoriteMovies = this._favorite.favorites
+  }
 
   ngOnInit() {
   }
+  
+  
+  /*
+  newsearch(search){
+    this._movie.getData(search)
+      .subscribe( (data: any) => {
+        console.log(data)
+        this.info = data.results
+        console.log(this.info)
+      })
+  }
+  */
 
 }

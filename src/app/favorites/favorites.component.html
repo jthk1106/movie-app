@@ -1,3 +1,7 @@
 <p>
 Favorite Movies
 </p>
+
+<div *ngIf="favoriteMovies">
+    <div *ngFor="let movie of favoriteMovies">{{movie.title}} {{movie.release_date}}
+    </div>

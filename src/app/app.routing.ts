@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { SearchComponent } from './search/search.component';
 import { MovieComponent } from './movie/movie.component';
+import { FavoritesComponent } from './favorites/favorites.component';
 
 export const ROUTES: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -18,7 +19,7 @@ export const ROUTES: Routes = [
     {path: 'about', component: AboutComponent},
     {path: 'registration', component: RegistrationComponent},
     {path: 'search', component: SearchComponent},
-    {path: 'movie', component: MovieComponent}
+    {path: 'favorites', component: FavoritesComponent}
 ];
 
 export const ROUTING: ModuleWithProviders = RouterModule.forRoot(ROUTES);
