@@ -27,7 +27,9 @@ export class SearchComponent implements OnInit {
   
   savemovie(movie){
     this._favorite.addMovie(movie)
-    
+    console.log(movie.id)
+    delete movie.id
+    console.log(movie.id)
   }
 
 }

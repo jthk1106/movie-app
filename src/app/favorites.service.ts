@@ -7,7 +7,7 @@ export class FavoritesService {
   constructor() { }
 
     addMovie(movie){
-        console.log(movie, "hit");
+        console.log(movie);
         this.favorites.push(movie);
     }
 }
