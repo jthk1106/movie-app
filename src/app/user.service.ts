@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable()
 export class UserService {
     baseURL: string = "http://jeremy-spring-2018-phortonssf.c9users.io:8080/api/appUsers/";
-    userData: any;
+    //userData: any;
     
     constructor(private _http: HttpClient) {
         

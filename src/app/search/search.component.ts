@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieService } from '../movie.service';
 import { FavoritesService } from '../favorites.service';
+import { SaveService } from '../save.service';
 
 @Component({
   selector: 'app-search',
@@ -9,7 +10,7 @@ import { FavoritesService } from '../favorites.service';
 })
 export class SearchComponent implements OnInit {
 
-  constructor(private _movie: MovieService, private _favorite: FavoritesService) { }
+  constructor(private _movie: MovieService, private _favorite: FavoritesService, private _save: SaveService) { }
   info: any;
   
   
@@ -28,8 +29,10 @@ export class SearchComponent implements OnInit {
   savemovie(movie){
     this._favorite.addMovie(movie)
     console.log(movie.id)
+    console.log(movie.title)
     delete movie.id
     console.log(movie.id)
+    this._save.saveMovie(movie)
   }
 
 }

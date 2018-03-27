@@ -17,6 +17,7 @@ import { UserService } from './user.service';
 import { NewuserService } from './newuser.service';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { FavoritesService } from './favorites.service';
+import { SaveService } from './save.service';
 
 @NgModule({
     declarations: [
@@ -37,7 +38,7 @@ import { FavoritesService } from './favorites.service';
         ROUTING,
         HttpClientModule
     ],
-    providers: [MovieService, UserService, NewuserService, FavoritesService],
+    providers: [MovieService, UserService, NewuserService, FavoritesService, SaveService],
     bootstrap: [AppComponent]
 })
 export class AppModule {
