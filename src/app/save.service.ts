@@ -1,23 +1,22 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { HomeComponent } from './home/home.component';
-import { SearchComponent } from './search/search.component';
 
 @Injectable()
 export class SaveService {
 baseURL: any = "http://jeremy-spring-2018-phortonssf.c9users.io:8080/api/appUsers/";
-sessionid: any;
-sessiontoken: any;
+//sessionid: any;
+//sessiontoken: any;
 
-  constructor(private _http: HttpClient, private _home: HomeComponent) { }
+  constructor(private _http: HttpClient) { }
 
     saveMovie(movie){
-        this.sessionid = this._home.user.userId
-        console.log(this.sessionid)
-        this.sessiontoken = this._home.user.token
-        console.log(this.sessiontoken)
+        let sessionid = sessionStorage.getItem('userId')
+        let sessiontoken = sessionStorage.getItem('token')
+        console.log(sessionid)
+        console.log(sessiontoken)
         
-        return this._http.post(this.baseURL+this.sessionid+'/movies?access_token='+this.sessiontoken, movie)
+        return this._http.post(this.baseURL+sessionid+'/movies?access_token='+sessiontoken, movie)
+        
     }
 }
 

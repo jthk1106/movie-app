@@ -24,9 +24,14 @@ export class HomeComponent {
         console.log(this.user);
         this._user.login(this.user)
             .subscribe(
-                userRes => console.log(userRes, "res"))
+                userRes => { console.log(userRes, "res")
+                sessionStorage.setItem('userId', userRes.userId)
+                sessionStorage.setItem('token', userRes.token)
+                //sessionStorage.setItem(userRes.token)    
+                })
         this.router.navigate(['/search']);
     }
     
 }
 
+//sessionStorage.setItem('key', 'value');

@@ -33,6 +33,10 @@ export class SearchComponent implements OnInit {
     delete movie.id
     console.log(movie.id)
     this._save.saveMovie(movie)
+      .subscribe(response => {
+        console.log(response)
+        
+      })
   }
 
 }
