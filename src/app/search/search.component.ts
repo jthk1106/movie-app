@@ -32,15 +32,27 @@ export class SearchComponent implements OnInit {
     console.log(movie.title)
     delete movie.id
     console.log(movie.id)
-    this._save.saveMovie(movie)
-      .subscribe(response => {
-        console.log(response)
-        
-      })
+    return this._save.saveMovie(movie)
+      .subscribe(
+        response => console.log(response, 'response')
+      )
   }
-
 }
-/*searchMovie(movie){
+/*
+loginSubmit(){
+  console.log(this.user);
+  this._user.login(this.user)
+      .subscribe(
+          userRes => { console.log(userRes, "res")
+          sessionStorage.setItem('userId', userRes.userId)
+          sessionStorage.setItem('token', userRes.token)
+          //sessionStorage.setItem(userRes.token)    
+          })
+  this.router.navigate(['/search']);
+}
+
+/*
+searchMovie(movie){
     this._movie.getData(movie)
       .subscribe(response => {
         console.log(response)
@@ -48,4 +60,5 @@ export class SearchComponent implements OnInit {
         console.log(this.data)
       }
       )
-  }*/
+  }
+*/

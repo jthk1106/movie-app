@@ -9,7 +9,10 @@ import { Router } from '@angular/router';
 })
 export class RegistrationComponent implements OnInit {
   user: any = {
-    
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: ''
   };
   
   constructor(private _user: UserService, private router: Router) {
@@ -24,6 +27,7 @@ export class RegistrationComponent implements OnInit {
     this._user.register(this.user)
       .subscribe(
         newReg => console.log(newReg, "reg"))
+    alert('Log in to start your search!');
     this.router.navigate(['/home'])
   }
 }

@@ -9,9 +9,28 @@
   <h1 class="w3-margin w3-jumbo">Very Safe Movie Finder Website</h1>
 </header>
 -->
-<p>VERY SAFE MOVIE FINDER WEBSITE</p>
-<p>Log in to your account</p>
+<div align='center'>
+<p class='large'>VERY SAFE MOVIE FINDER</p>
+<br>
+<p class='medium'>Log In To Your Account</p>
+<br>
+<div>
+    <input
+    type = "text"
+    placeholder="email or credit card" 
+    [(ngModel)]="user.email" >
+</div>
+<div>
+    <input
+    type = "password"
+    placeholder="password" 
+    [(ngModel)]="user.password"> 
+</div>
+<br>
+<button class = "btn btn-success" (click) = "loginSubmit()">Login</button>
 
+</div>
+<!--
 <div>
     <input class = "email"
     type = "text"
@@ -27,6 +46,7 @@
 <div>
     <button class = "btn btn-success" (click) = "loginSubmit()">Login</button>
 </div>
+-->
 <!--
 <title>W3.CSS Template</title>
 <meta charset="UTF-8">

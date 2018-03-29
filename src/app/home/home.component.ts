@@ -13,7 +13,8 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent {
     user: any = {
-    
+        email: '',
+        password: ''
     };
     
     constructor(private _user: UserService, private router: Router){
@@ -27,8 +28,8 @@ export class HomeComponent {
                 userRes => { console.log(userRes, "res")
                 sessionStorage.setItem('userId', userRes.userId)
                 sessionStorage.setItem('token', userRes.token)
-                //sessionStorage.setItem(userRes.token)    
                 })
+        alert('Start Searching!');
         this.router.navigate(['/search']);
     }
     

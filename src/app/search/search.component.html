@@ -1,8 +1,10 @@
+<!--
 <p>
 Find a movie
 </p>
 
 <div>
+  
 <label>search:
     <input [(ngModel)]="_movie.search" placeholder="enter search" (keyup.enter)="newsearch()">
 </label>
@@ -15,9 +17,38 @@ Find a movie
     </div>
   </div>
 </div>
+
+</div>
+-->
+<div>
+<div align='center'>
+<p class="large">VERY SAFE MOVIE FINDER</p>
+<br>
+<p class='medium'>Find A Movie</p>
+<br>
+<label>search:
+    <input [(ngModel)]="_movie.search" placeholder="enter search" (keyup.enter)="newsearch()">
+</label>
+</div>
+<div class="row">
+    <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+        <div class="card" *ngIf="info" >
+            <div *ngFor="let typed of info">
+            <div class="card-header" >{{typed.title}}<div>Release Date: {{typed.release_date}}</div>
+            <button class="btn btn-primary" (click) = "savemovie(typed)">Add to Favorites</button>
+            </div>
+            <div class="card-block" *ngIf="typed.poster_path!=null">
+                <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{typed.poster_path}}">
+            </div>
+            <div class="card-footer">
+                
+            </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-
+</div>
 <!--
 <div *ngIf="typed.poster_path=null">
   <img src="https://commons.wikimedia.org/wiki/File%3ANo_image_available.svg">
