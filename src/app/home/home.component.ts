@@ -17,17 +17,17 @@ export class HomeComponent {
         password: ''
     };
     
-    constructor(private _user: UserService, private router: Router){
+    constructor(private _user: UserService, private router: Router) {
         
     }
     
-    loginSubmit(){
+    loginSubmit() {
         console.log(this.user);
         this._user.login(this.user)
             .subscribe(
-                userRes => { console.log(userRes, "res")
-                sessionStorage.setItem('userId', userRes.userId)
-                sessionStorage.setItem('token', userRes.token)
+                (userRes: any) => { console.log(userRes, "res")
+                    sessionStorage.setItem('userId', userRes.userId)
+                    sessionStorage.setItem('token', userRes.token)
                 })
         alert('Start Searching!');
         this.router.navigate(['/search']);
