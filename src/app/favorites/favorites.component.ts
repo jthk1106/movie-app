@@ -8,15 +8,15 @@ import { FavoritesService } from '../favorites.service';
 })
 export class FavoritesComponent implements OnInit {
   favoriteMovies: any;
-  
-  constructor(private _favorite: FavoritesService) { 
+
+  constructor(private _favorite: FavoritesService) {
     this.favoriteMovies = this._favorite.favorites
   }
 
   ngOnInit() {
   }
-  
-  
+
+
   /*
   newsearch(search){
     this._movie.getData(search)

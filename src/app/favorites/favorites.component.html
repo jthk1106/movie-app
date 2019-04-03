@@ -10,11 +10,12 @@
     <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
         <div class="card" *ngIf="favoriteMovies" >
             <div *ngFor="let movie of favoriteMovies">
-            <div class="card-header" >{{movie.title}}<div>Release Date: {{movie.release_date}}</div>
-            </div>
-            <div class="card-block" *ngIf="movie.poster_path!=null">
-                <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{movie.poster_path}}">
-            </div>
+                <div class="card-header">{{movie.title}}
+                    <div>Release Date: {{movie.release_date}}</div>
+                </div>
+                <div class="card-block" *ngIf="movie.poster_path!=null">
+                    <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{movie.poster_path}}">
+                </div>
             </div>
         </div>
     </div>

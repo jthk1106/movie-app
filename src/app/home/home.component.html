@@ -1,33 +1,29 @@
-<!--
-  ~ Copyright (c) 2016 VMware, Inc. All Rights Reserved.
-  ~ This software is released under MIT license.
-  ~ The full license information can be found in LICENSE in the root directory of this project.
-  -->
-    <!-- Header -->
-<!--
-<header class="w3-container w3-red w3-center" style="padding:128px 16px">
-  <h1 class="w3-margin w3-jumbo">Very Safe Movie Finder Website</h1>
-</header>
--->
 <div align='center'>
-<p class='large'>VERY SAFE MOVIE FINDER</p>
-<br>
-<p class='medium'>Log In To Your Account</p>
-<br>
-<div>
+  <p class='large'>VERY SAFE MOVIE FINDER</p>
+  
+  <br>
+
+  <p class='medium'>Log In To Your Account</p>
+
+  <br>
+
+  <div>
     <input
-    type = "text"
-    placeholder="email or credit card" 
-    [(ngModel)]="user.email" >
-</div>
-<div>
+      type="text"
+      placeholder="email or credit card" 
+      [(ngModel)]="user.email">
+  </div>
+
+  <div>
     <input
-    type = "password"
-    placeholder="password" 
-    [(ngModel)]="user.password"> 
-</div>
-<br>
-<button class = "btn btn-success" (click) = "loginSubmit()">Login</button>
+      type="password"
+      placeholder="password" 
+      [(ngModel)]="user.password"> 
+  </div>
+
+  <br>
+  
+  <button class="btn btn-success" (click)="loginSubmit()" onkeypress="loginSubmit()">Login</button>
 
 </div>
 <!--

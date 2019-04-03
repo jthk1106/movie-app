@@ -1,8 +1,3 @@
-/*
- * Copyright (c) 2016 VMware, Inc. All Rights Reserved.
- * This software is released under MIT license.
- * The full license information can be found in LICENSE in the root directory of this project.
- */
 import { Component } from "@angular/core";
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
@@ -22,10 +17,9 @@ export class HomeComponent {
     }
     
     loginSubmit() {
-        console.log(this.user);
         this._user.login(this.user)
             .subscribe(
-                (userRes: any) => { console.log(userRes, "res")
+                (userRes: any) => {
                     sessionStorage.setItem('userId', userRes.userId)
                     sessionStorage.setItem('token', userRes.token)
                 })
@@ -34,5 +28,3 @@ export class HomeComponent {
     }
     
 }
-
-//sessionStorage.setItem('key', 'value');
