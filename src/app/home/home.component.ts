@@ -11,11 +11,11 @@ export class HomeComponent {
         email: '',
         password: ''
     };
-    
+
     constructor(private _user: UserService, private router: Router) {
-        
+
     }
-    
+
     loginSubmit() {
         this._user.login(this.user)
             .subscribe(
@@ -26,5 +26,5 @@ export class HomeComponent {
         alert('Start Searching!');
         this.router.navigate(['/search']);
     }
-    
+
 }

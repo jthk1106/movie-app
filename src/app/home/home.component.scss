@@ -1,12 +1,22 @@
-// Copyright (c) 2016 VMware, Inc. All Rights Reserved.
-// This software is released under MIT license.
-// The full license information can be found in LICENSE in the root directory of this project.
 .large {
-  font-size: 20px;
+  font-size: 40px;
   font-weight: bold;
-  color: gray;
+  color: white;
+  text-shadow:0px 0px 20px black;
 }
 
 .medium {
   font-size: 18px;
+}
+
+.login-wrapper {
+  background: none!important;
+  justify-content: center;
+  background-color: rgb(0, 0, 0)
+}
+
+.mov-btn {
+  background-color: #42f4e2;
+  border-color: #42f4e2;
+  color: white
 }

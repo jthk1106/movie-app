@@ -1,9 +1,16 @@
 .large {
-  font-size: 20px;
+  font-size: 40px;
   font-weight: bold;
-  color: gray;
+  color: white;
+  text-shadow:0px 0px 20px black;
 }
 
 .medium {
   font-size: 18px;
+}
+
+.mov-btn {
+  background-color: #42f4e2;
+  border-color: #42f4e2;
+  color: white
 }
