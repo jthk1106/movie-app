@@ -8,8 +8,7 @@
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test --single-run",
     "pree2e": "webdriver-manager update",
-    "e2e": "protractor protractor.config.js",
-    "postinstall": "ng build --prod"
+    "e2e": "protractor protractor.config.js"
   },
   "private": true,
   "dependencies": {
