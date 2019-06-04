@@ -3,7 +3,6 @@
   "version": "0.10.0",
   "description": "Angular-CLI starter for a Clarity project",
   "angular-cli": {},
-  "main": "server.js",
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
