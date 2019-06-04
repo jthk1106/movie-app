@@ -4,7 +4,7 @@ Find a movie
 </p>
 
 <div>
-  
+
 <label>search:
     <input [(ngModel)]="_movie.search" placeholder="enter search" (keyup.enter)="newsearch()">
 </label>
@@ -29,7 +29,7 @@ Find a movie
     <br>
 
     <form clrForm>
-      <input clrInput placeholder="Search safely" name="input" [(ngModel)]="_movie.search" (keyup.enter)="newsearch()"/>
+      <input clrInput placeholder="Search safely" name="input" [(ngModel)]="search" (keyup.enter)="newsearch()"/>
     </form>
     <br>
 

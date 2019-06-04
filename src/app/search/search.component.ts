@@ -10,14 +10,25 @@ import { SaveService } from '../save.service';
 })
 export class SearchComponent implements OnInit {
 
-  constructor(public _movie: MovieService, private _favorite: FavoritesService, private _save: SaveService) { }
   info: any;
+  search: string;
 
+  constructor(public _movie: MovieService, private _favorite: FavoritesService, private _save: SaveService) { }
 
   ngOnInit() {
   }
 
+  newsearch(){
+    this._movie.getData(this.search)
+      .subscribe( (data: any) => {
+        console.log(data)
+        this.info = data.results
+        console.log(this.info)
+      })
+  }
+  /*
   newsearch(search){
+    console.log('search:', search)
     this._movie.getData(search)
       .subscribe( (data: any) => {
         console.log(data)
@@ -25,6 +36,7 @@ export class SearchComponent implements OnInit {
         console.log(this.info)
       })
   }
+  */
 
   savemovie(movie){
     this._favorite.addMovie(movie)
