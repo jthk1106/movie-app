@@ -29,14 +29,15 @@
     "@clr/ui": "^0.11.0",
     "@webcomponents/custom-elements": "1.0.0",
     "core-js": "^2.4.1",
+    "express": "^4.17.1",
     "mutationobserver-shim": "^0.3.2",
     "rxjs": "^6.5.2",
+    "rxjs-compat": "^6.0.0-rc.0",
     "ts-helpers": "^1.1.1",
     "tslib": "^1.9.0",
     "typescript": "^3.4.5",
     "web-animations-js": "github:angular/web-animations-js#release_pr208",
-    "zone.js": "~0.9.1",
-    "rxjs-compat": "^6.0.0-rc.0"
+    "zone.js": "~0.9.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.800.0",
